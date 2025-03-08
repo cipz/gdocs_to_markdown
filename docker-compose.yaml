@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  mkdocs:
+    build: ./mkdocs
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./docs:/app/docs
+    command: ["serve", "-a", "0.0.0.0:8000"]
